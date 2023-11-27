@@ -2,7 +2,7 @@
 import axios from "axios";
 import AppHeader from "./components/AppHeader.vue";
 import { store } from "./store.js";
-import CharactersList from "./components/CharactersList.vue";
+import CardInfo from "./components/CardInfo.vue";
 
 export default {
   data() {
@@ -13,10 +13,10 @@ export default {
   created() {
     axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0")
       .then((resp) => {
-        this.store.data = resp.data.results;
+        this.store.cardinfo = resp.data.results;
       });
   },
-  components: { AppHeader, CharactersList }
+  components: { AppHeader, CardInfo }
 };
 
 
@@ -26,7 +26,7 @@ export default {
   <!-- header -->
   <AppHeader />
   <!-- characters list of cards -->
-  <CharactersList />
+  <CardInfo />
 </template>
 
 <style lang="scss" >
