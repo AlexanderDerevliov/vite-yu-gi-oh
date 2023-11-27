@@ -13,7 +13,7 @@ export default {
   created() {
     axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0")
       .then((resp) => {
-        this.store.cardinfo = resp.data.results;
+        this.store.data = resp.data.results;
       });
   },
   components: { AppHeader, CardInfo }
@@ -30,5 +30,6 @@ export default {
 </template>
 
 <style lang="scss" >
-@use "./style/general.scss"
+@use "./style/general.scss";
+
 </style>
