@@ -64,7 +64,7 @@
 
 <template>
     <AppHeader/>
-    <Cerca @giuseppe="carloApi"/>
+    <Cerca @Alex="carloApi"/>
     <spinner v-if="(store.spinner)"/>
     <AppCharacters v-else/>
 </template>

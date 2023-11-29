@@ -17,7 +17,7 @@ export default {
             <select v-model="store.testoRicerca">
                 <option  class="p-3" v-for="(elem, index) in store.arrayArchetipi"  :value="elem">{{ elem }}</option>
             </select>
-            <button class="btn btn-primary mx-2 p-1" @click="$emit('giuseppe')" type="submit">Cerca</button>
+            <button class="btn btn-primary mx-2 p-1" @click="$emit('Alex')" type="submit">Cerca</button>
         </div>
 
     </div>
