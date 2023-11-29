@@ -1,7 +1,7 @@
 <script >
   import AppHeader from './components/AppHeader.vue';
   import AppCharacters from './components/AppCharacters.vue';
-  import Cerca from './components/cerca.vue';
+  import Cerca from './components/Cerca.vue';
   import spinner from './components/spinner.vue'
   import axios from 'axios';
   import {store} from './store';
@@ -23,7 +23,7 @@
       this.apiArchetipi()
     },
     computed:{
-      carloApi(){
+      myApi(){
         store.spinner=true
         if(store.testoRicerca==''){
           axios.get(`https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0`)
@@ -64,7 +64,7 @@
 
 <template>
     <AppHeader/>
-    <Cerca @Alex="carloApi"/>
+    <Cerca @Alex="myApi"/>
     <spinner v-if="(store.spinner)"/>
     <AppCharacters v-else/>
 </template>

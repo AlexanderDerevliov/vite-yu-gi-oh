@@ -2,7 +2,7 @@
  import Card from './Card.vue'
  import {store} from '../store'
   export default {
-    name: 'AppMain',
+    name: 'AppCharacters',
     components:{
         Card
     },
